@@ -6,16 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    body{
+      background: whitesmoke;
+      background-size: auto;
+      font-family: 'Trebuchet MS', sans-serif; 
+    }
     /* TODO - make it fixed width, and so the cursor isn't massive */
     .typing-text{
-      color: red;
+      overflow: hidden;
+      width: 0;
+      white-space: nowrap;
+      font-size: 1.6rem;
+      border-right: .15em solid orange;
+      animation: typing 3.5s steps(22, end) forwards;
+      /* color: red;
       white-space: nowrap;
       overflow: hidden;
       border-right: .15em solid red;
-      font-family: monospace;
       animation:
-        typing 3.5s steps(40, end), blinking-cursor .5s step-end infinite;
+        typing 3.5s steps(40, end), blinking-cursor .5s step-end infinite; */
     }
+
+    .container {
+      display: inline-block;
+    }
+
 
     @keyframes typing {
       from {width: 0}
@@ -34,8 +49,10 @@
   </style>
 </head>
 <body>
+  <div class="container">
   <div class="typing-text">
     <h1>Here is a piece of text.</h1>
   </div>
+</div>
 </body>
 </html>
